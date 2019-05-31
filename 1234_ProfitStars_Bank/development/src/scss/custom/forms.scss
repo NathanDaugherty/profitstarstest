@@ -1,0 +1,82 @@
+form {
+	@include placeholderColor($input-color-placeholder);
+}
+label {
+	font-weight:normal;
+}
+select,
+.form-control,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	@extend .form-control;
+	@include inputStyle();
+}
+input [type="radio"] {
+
+}
+input [type="select"] {
+	
+}
+select {
+	@include selectStyle();
+}
+textarea {
+
+}
+.parsley-errors-list  {
+	list-style-type: none;
+	padding-left:0;
+	color:$red;
+	font-size:$font-size-base - 3;
+}
+.required {
+
+}
+.btn {
+	position:relative;
+	.loading {
+		position:absolute;
+		right:-30px;
+		top:50%;
+		margin-top:-12px;
+		padding:0;
+		display:none;
+	}
+}
+.error {
+	color:$red;
+	padding-top:20px;
+	display:none;
+	white-space:no-wrap;
+	min-width:200px;
+}
+.success-container {
+	clear:both;
+	min-height:200px;
+	display:none;
+	@extend .clearfix;
+}
+
+.bannoLogin__container {
+	max-width:450px;
+	margin:40px auto;
+	form {
+		input,.btn {
+			margin-bottom:10px;
+		}
+
+	}
+}

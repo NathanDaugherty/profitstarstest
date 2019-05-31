@@ -1,0 +1,73 @@
+{
+  "site": "ProfitStars Test Bank",
+  "zip": "profitstarstestbank",
+  "baseFont": "source-sans-pro",
+  "altFont": "",
+  "domain": "https://profitstarstestbank.com",
+  "scaffold": "profitstarstestbank-make.json",
+  "url": {
+    "local": "http://profitstarstestbank.dev.banno.com",
+    "staging": "https://profitstarstestbank-stag.banno.com",
+    "uat": "https://profitstarstestbank-uat.banno.com"
+  },
+  "name": "ProfitStars-Test-Bank",
+  "version": "1.0.0",
+  "description": "ProfitStars Test Bank Website",
+  "engines": "node >= 10.15.1",
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "beeper": "^1.1.1",
+    "bootstrap-sass": "git+ssh://git@git.banno.com:cms-development/banno-bootstrap-sass-3-4.git",
+    "browser-sync": "^2.23.5",
+    "del": "latest",
+    "fonts": "git+ssh://git@git.banno.com:cms-development/fonts.git",
+    "grunt": "0.4.x",
+    "grunt-cms-site-scaffold": "git+ssh://git@github.com/Banno/grunt-cms-site-scaffold.git",
+    "grunt-cms-upload": "git+ssh://git@github.com/Banno/grunt-cms-upload.git",
+    "gulp": "3.9.x",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "2.6.x",
+    "gulp-gzip": "^1.4.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "3.3.x",
+    "gulp-mustache": "^4.1.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-preprocess": "^3.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-split-files": "^1.2.3",
+    "gulp-uglify": "latest",
+    "gulp-version-append": "^0.2.0",
+    "gulp-zip": "^4.2.0",
+    "map-stream": "0.0.x",
+    "merge-stream": "latest",
+    "parsleyjs": "2.8.x",
+    "postcss": "^7.0.14",
+    "postcss-critical-split": "2.5.x",
+    "postcss-pxtorem": "4.0.x",
+    "run-sequence": "^2.2.1",
+    "slick-carousel-latest": "1.x.x"
+  },
+  "scripts" : {
+    "postinstall" : "gulp && gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.banno.com:cms-development/profitstarstestbank.git"
+  },
+  "boostrap-version": "Bootstrap 3",
+  "author": "Web Team",
+  "license": "All Rights"
+}

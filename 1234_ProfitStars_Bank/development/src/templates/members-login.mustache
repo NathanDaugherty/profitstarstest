@@ -1,0 +1,86 @@
+{{> partials/top}}
+<body class="subpage">
+  {{> partials/compliance}}
+  <div class="master-container">
+
+    {{> partials/header}}
+
+    <div class="container">
+
+      {{> partials/nav}}
+
+      <div id="main" tabindex="-1" role="main">
+          <div class="row">
+            <div class="col-lg-9 col-md-7 content">
+                <div class="bannoLogin__container">
+                  <!-- @if NODE_ENV!='production' -->
+                    <div class="banno-members-wrapper">
+                      <div class="banno-members-container">
+                        <div class="banno-members-login-container">
+                          <form id="banno-members-login" action="/members-page">
+                            <label for="login-email" class="visuallyhidden sr-only">Email Address</label>
+                            <input id="login-email" name="email" class="email" placeholder="name@example.com" type="email">
+
+                            <label for="login-password" class="visuallyhidden sr-only">Password</label>
+                            <input id="login-password" name="password" class="password" type="password" placeholder="Password" autocomplete="off">
+
+                            <button class="banno-members-submit btn btn-primary" id="banno-members-login-btn" type="submit">Login</button>
+                          </form>
+                          <a href="#" id="reset-pass-control" class="banno-members-link">Forgot password?</a>
+                        </div>
+                        <div class="banno-members-reset-container" style="display: none;">
+                          <form id="banno-members-reset" method="post">
+                            <p class="banno-members-text">Enter your email and we'll send you a link to reset your password.</p>
+                            <label for="forgot-email" class="visuallyhidden sr-only">Email address</label>
+                            <input id="forgot-email" name="forgot-email" class="email" placeholder="name@example.com" type="email">
+                            <button class="banno-members-submit btn btn-primary" id="banno-members-reset-btn" type="submit">Send</button>
+                          </form>
+                          <a href="#" id="login-control" class="banno-members-link">Nevermind, I remember now.</a>
+                        </div>
+                      </div>
+                      <div id="login-error" class="alert alert-block alert-error" style="display: none;">
+                        <h4 class="alert-heading">Unable to login!</h4>
+                        Double check your login credentials and try again.
+                      </div>
+                      <div id="reset-error" class="alert alert-block alert-error" style="display: none;">
+                        <h4 class="alert-heading">Unable to reset password!</h4>
+                        Double check your email and try again.
+                      </div>
+                      <div id="reset-confirm" class="alert alert-block alert-info" style="display: none;">
+                        <h4 class="alert-heading">Check your email.</h4>
+                        We're sending you an email with a link to reset your password.
+                      </div>
+                    </div>
+                  <!-- @endif -->  
+                    <banno:member-login landingPage="/members-page"></banno:member-login>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5">
+                <div class="content" data-content-block="bodyCopy2" data-content="content" data-editable="editable">
+                    {{#page.bodyCopy2}}
+                      {{& content}}
+                    {{/page.bodyCopy2}}
+                      <!-- @if NODE_ENV!='production' -->
+                        <p><a href="" class="btn">Default Button</a></p>
+                        <p><a href="" class="btn btn-primary">Primary Button</a></p>
+                        <p><a href="" class="btn btn-info">Info Button</a></p>
+                        <p><a href="" class="btn btn-success">Success Button</a></p>
+                        <p><a href="" class="btn btn-warning">Warning Button</a></p>
+                        <p><a href="" class="btn btn-danger">Danger Button</a></p>
+                        <p><a href="" class="btn btn-inverse">Inverse Button</a></p>
+                      <!-- @endif -->  
+                </div>
+            </div>
+          </div>
+      </div>
+    
+    </div>
+
+      {{> partials/footer}}
+
+  </div>
+
+  {{> partials/scripts}}
+
+</body>
+</html>

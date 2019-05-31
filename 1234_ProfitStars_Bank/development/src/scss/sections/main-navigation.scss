@@ -1,0 +1,270 @@
+#main-nav{
+   ul{
+   	list-style: none;
+   	margin: 0;
+   	padding: 0;
+   	font-weight: 600;
+   }
+
+   span, a{
+   	display: block;
+   }
+
+	// common dropdown styles
+	.dropdown-menu{
+      position: static;
+      float: none;
+      background: none;
+      border: 0;
+      box-shadow: none;
+      margin-left: 24px;
+
+		a{
+			padding: 4px 0;
+			line-height: 1.25;
+
+			&:hover, &:focus{
+				background: none;
+				text-decoration: underline;
+			}
+		}
+	}
+
+   // top level nav items
+   > ul > li {
+      position: relative;
+      display: block;
+      border-bottom: 1px solid #999;
+
+      > a, > span {
+         @extend .all-caps;
+         cursor: pointer;
+         padding: 10px;
+         font-size: 15px;
+         color: $gray;
+
+         &:focus {
+            @include tab-focus;
+         }
+      }
+
+		// second level nav
+      > ul{
+	   	margin-bottom: 20px;
+
+		   > li{
+		   	margin-bottom: 8px;
+	      	> a, > span{
+	      		color: $blue;
+	      		font-size: 13px;
+	      		font-weight: 600;
+	      	}
+
+				// third level nav
+			   > ul {
+			   	margin: 8px 0;
+			   	font-size: 12px;
+			   }
+		   }
+      }
+   }
+}
+
+.navbar {
+   position: relative;
+   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+   margin-bottom: $navbar-margin-bottom;
+   border: 1px solid transparent;
+   background-color: $navbar-bg;
+   border-color: $navbar-border;
+   @include clearfix;
+}
+
+// Navbar heading
+// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
+// styling of responsive aspects.
+
+.navbar-header {
+   @include clearfix;
+}
+
+.navbar-collapse {
+   overflow-x: visible;
+   padding-right: $navbar-padding-horizontal;
+   padding-left: $navbar-padding-horizontal;
+   border-top: 1px solid transparent;
+   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+   @include clearfix;
+   -webkit-overflow-scrolling: touch;
+
+   &.in {
+      overflow-y: auto;
+   }
+}
+
+// Banno Menu CSS
+// .navbar-collapse .banno-menu {
+//    margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+//    padding: 0;
+//    list-style: none;
+
+//    > li {
+//       position: relative;
+//       display: block;
+
+//       > a, > span {
+//          position: relative;
+//          display: block;
+//          padding: $nav-link-vertical-padding $nav-link-horizontal-padding;
+//          cursor: pointer;
+//          line-height: $line-height-computed;
+//          color: $navbar-color;
+//          &:focus {
+//             @include tab-focus;
+//          }
+//       }
+//    }
+// }
+
+// medium down
+// From 767px and down
+@media screen and (max-width: $grid-float-breakpoint-max) {
+   // Navbar toggle
+   //
+   // Custom button for toggling the `.navbar-collapse`, powered by the collapse
+   // JavaScript plugin.
+
+   // .navbar-toggle {
+   // position: relative;
+   // float: right;
+   // margin-right: $navbar-padding-horizontal;
+   // padding: 9px 10px;
+   // background-color: transparent;
+   // background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+   // We remove the `outline` here, but later compensate by attaching `:hover`
+   // styles to `:focus`.
+   // &:focus {
+   //   outline: 0;
+   // }
+   // }
+
+
+   // .navbar-collapse .banno-menu {
+   //    .open .dropdown-menu {
+   //       position: static;
+   //       float: none;
+   //       width: auto;
+   //       margin-top: 0;
+   //       background-color: transparent;
+   //       border: 0;
+   //       box-shadow: none;
+
+   //       >li>a, >li>span {
+   //          line-height: $line-height-computed;
+   //          padding: 5px 15px 5px 25px;
+   //          &:hover,
+   //          &:focus {
+   //             background-image: none;
+   //          }
+   //       }
+
+   //       &.active {
+   //          display: block;
+   //          margin: 0 15px;
+   //       }
+   //    }
+   // }
+}
+
+// medium up
+// From 768px and up
+@media screen and (min-width: $grid-float-breakpoint) {
+   .navbar-header {
+      float: left;
+   }
+
+   .navbar-collapse {
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
+      padding: 0;
+
+      &.collapse {
+         display: block !important;
+         visibility: visible !important;
+         height: auto !important;
+         padding-bottom: 0; // Override default setting
+         overflow: visible !important;
+      }
+
+      &.in {
+         overflow-y: visible;
+      }
+
+      // Undo the collapse side padding for navbars with containers to ensure
+      // alignment of right-aligned contents.
+      .navbar-fixed-top &,
+      .navbar-static-top &,
+      .navbar-fixed-bottom & {
+         padding-left: 0;
+         padding-right: 0;
+      }
+   }
+
+   .navbar-collapse .banno-menu {
+      margin: 0;
+
+      >li {
+         float: left;
+         >a, >span {
+            padding-top: $navbar-padding-vertical;
+            padding-bottom: $navbar-padding-vertical;
+
+            // Change top most links color/background
+            &:hover,
+            &:focus {
+               color: $navbar-link-hover-color;
+               background-color: $navbar-link-hover-bg;
+            }
+         }
+         .menu-group {
+            position: relative;
+            .dropdown-menu {
+               left: 100%;
+               top: 0;
+            }
+         }
+         .group-item {
+            display: block;
+            position: relative;
+            padding: 3px 20px;
+         }
+
+         // If you want columns in your dropdown to show on desktop, uncomment below.
+         // > ul {
+         //   	min-width: 500px;
+
+         //   	> li {
+         //    	float: left;
+         //    	min-width: 135px;
+
+         //    	> span, > a {
+         //    		font-size: 18px;
+
+         //    	}
+
+         //    	> ul {
+         //    		display: block;
+         //    		position: static;
+         //    		padding: 0;
+         //    		box-shadow: none;
+         //    		border: none !important;
+         //    	}
+
+
+         //  }
+         // }
+      }
+   }
+}

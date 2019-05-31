@@ -1,0 +1,32 @@
+.onlineBanking__container {
+	@extend .clearfix;
+	// @media (min-width:$screen-sm-min) {
+	// 	.row {
+	// 		margin:0;
+	// 	}
+	// 	//max-width:320px;
+	// 	float:right;
+	// }
+	// @media (max-width:$screen-xs-max) {
+	// 	clear:both;
+	// 	padding:10px;
+	// 	margin-top:20px;
+	// 	display:none;
+	// 	&.toggled {
+	// 		display:block;
+	// 	}
+	// }
+	.welcome-text {
+		font-weight:bold;
+		margin-bottom:10px;
+	}
+	// .row {
+	// 	.col-sm-5,.col-sm-2,.col-xs-12 {
+	// 		padding:0 3px;
+	// 	}
+	// }
+	ul.list-inline {
+		padding-left:0;
+		clear:both;
+	}
+}

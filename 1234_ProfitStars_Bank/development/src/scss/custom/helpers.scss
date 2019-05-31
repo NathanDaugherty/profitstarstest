@@ -1,0 +1,392 @@
+// Global styles
+// =================================================
+img {
+  max-width:100%;
+}
+.master-container {
+  position:relative;
+  overflow:hidden;
+}
+#main {
+  outline: 0;
+}
+.input-wrapper,.relative {
+  position:relative;
+}
+.absolute {
+  position:absolute;
+}
+.hidden-content, .hidden-alert {
+  display: none;
+}
+.inner-xs     { padding: 5px;  @include clearfix; }
+.inner-sm     { padding: 10px; @include clearfix; }
+.inner        { padding: 15px; @include clearfix; }
+.inner-md     { padding: 20px; @include clearfix; }
+.inner-lg     { padding: 30px; @include clearfix; }
+.inner-xl     { padding: 50px; @include clearfix; }
+
+.padder-xs    { padding: 5px; }
+.padder-sm    { padding: 10px; }
+.padder       { padding: 15px; }
+.padder-md    { padding: 20px; }
+.padder-lg    { padding: 30px; }
+.padder-xl    { padding: 50px; }
+.padder-n,
+.padder-none    { padding: 0; }
+
+.padder-v-xs  { padding-top: 5px; padding-bottom: 5px;}
+.padder-v-sm  { padding-top: 10px; padding-bottom: 10px;}
+.padder-v     { padding-top: 15px; padding-bottom: 15px;}
+.padder-v-md  { padding-top: 20px; padding-bottom: 20px;}
+.padder-v-lg  { padding-top: 30px; padding-bottom: 30px;}
+.padder-v-xl  { padding-top: 50px; padding-bottom: 50px;}
+
+.no-gutter {
+  [class^="span-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.m-xs     { margin: 5px; }
+.m-sm     { margin: 10px; }
+.m        { margin: 15px; }
+.m-md     { margin: 20px; }
+.m-lg     { margin: 30px; }
+.m-xl     { margin: 50px; }
+.m-n,.m-none  { margin: 0; }
+
+.m-t-none   { margin-top: 0; }
+.m-t-xs     { margin-top: 5px; }
+.m-t-sm     { margin-top: 10px; }
+.m-t        { margin-top: 15px; }
+.m-t-md     { margin-top: 20px; }
+.m-t-lg     { margin-top: 30px; }
+.m-t-xl     { margin-top: 50px; }
+
+.m-b-none   { margin-bottom: 0; }
+.m-b-xs     { margin-bottom: 5px; }
+.m-b-sm     { margin-bottom: 10px; }
+.m-b        { margin-bottom: 15px; }
+.m-b-md     { margin-bottom: 20px; }
+.m-b-lg     { margin-bottom: 30px; }
+.m-b-xl     { margin-bottom: 50px; }
+
+.no-radius    { border-radius: 0;}
+
+.b        { border: 1px solid #ebebeb; }
+.bordered     { border: 1px solid #d1d3d4; }
+
+.img-circle   { border-radius: 50%; }
+
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+// Backgrounds
+.bg-light     { background-color: $gray-lighter; }
+.bg-white     { background-color: $white; }
+.bg-gray      { background-color: $gray; }
+.bg-default   { background-color: $brand-default; }
+.bg-primary   { background-color: $brand-primary; }
+.bg-black     { background-color: $gray-base; }
+
+.no-pointer-event{
+  pointer-events: none;
+  .edit &{
+    pointer-events: auto;
+  }
+}
+.all-caps{
+  text-transform: uppercase;
+}
+
+
+.break-mobile {
+  @media (max-width:$screen-xs-max) {
+    margin-top:10px;
+    li {
+        display:block;
+        width:100%;
+        margin-bottom:10px;
+    }
+  }
+}
+
+
+// SPACER BLOCKS
+// =================================================
+.spacer-10 {
+  display:block;
+  width:100%;
+  height:10px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-15 {
+  display:block;
+  width:100%;
+  height:15px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-20 {
+  display:block;
+  width:100%;
+  height:20px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-30 {
+  display:block;
+  width:100%;
+  height:30px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-40 {
+  display:block;
+  width:100%;
+  height:40px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-50 {
+  display:block;
+  width:100%;
+  height:50px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-60 {
+  display:block;
+  width:100%;
+  height:60px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-70 {
+  display:block;
+  width:100%;
+  height:70px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+.spacer-80 {
+  display:block;
+  width:100%;
+  height:80px;
+  clear:both;
+  padding:0;
+  margin:0;
+}
+
+// LOADING SCREEN FOR SLIDESHOWS AND IMAGE BLOCKS
+// =================================================
+.loader {
+  position:relative;
+  .loading {
+    position:relative;
+    top:50%;
+    margin-top:-30;
+    .loading-inner {
+      margin:0 auto;
+    }
+  }
+  .load-watch {
+    opacity:0;
+  }
+  overflow:hidden;
+  height:440px;
+  @media (min-width:$screen-sm-min) {
+    height:440px;
+  }
+  @media (min-width:$screen-md-min) {
+    height:80vh;
+  }
+  &.grid-lines {
+    background: repeating-linear-gradient(
+      -55deg,
+      rgba($white,0.1),
+      rgba($white,0.1) 5,
+      rgba($gray,0.1) 5,
+      rgba($gray,0.1) 6
+    );
+    border-bottom:1px solid rgba($gray,0.1);
+    border-top:1px solid rgba($gray,0.1);
+  }
+  &.smaller {
+      height:240px;
+    @media (min-width:$screen-sm-min) {
+      height:240px;
+    }
+    @media (min-width:$screen-md-min) {
+      height:240px;
+    }
+  }
+}
+
+// =================================================
+
+
+
+// class to define screen size for use in javascript functions
+//==================================================
+
+// .screener {
+//   display:block;
+//   position:absolute;
+//   font-size:0;
+//   line-height:0;
+//   height:0px;
+//   width:0px;
+//   @media (min-width:$screen-md-min) and (max-width:$screen-md-max) {
+//     display:inline-block;
+//   }
+//   @media (min-width:$screen-sm-min) and (max-width:$screen-sm-max) {
+//     display:inline;
+//   }
+//   @media (max-width:$screen-xs-max) {
+//    display:none;
+//   }
+// }
+
+//==================================================
+
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video { padding-top: 0; }
+}
+
+//loading animation styles
+//==================================================
+span.loading {
+   &,span.loading-inner {
+    display:block;
+   }
+}
+
+.loading {
+  padding: 10px 0;
+}
+.loading-inner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #333333;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    @include animation(spin 1.5s linear infinite);
+}
+@-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#complianceMenu,#acrobatNotice {
+  &.focused,&:focus {
+    display:block;
+    opacity:1;
+    min-width:200px;
+    height:auto;
+    width:auto;
+    clip:auto;
+    overflow:visible;
+    padding: 1.25rem;
+    margin: 0;
+    top:1rem;
+    left:1rem;
+    z-index:99999;
+    background:$gray-dark;
+    a {
+      color:$white;
+      text-decoration: underline;
+      &:hover,&:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// ADA and screen reader styles
+//==================================================
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.hidden-compliance {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  &:focus {
+    background-color: $brand-default;
+    color: #fff;
+    top: 16px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    clip: auto;
+    display: block;
+    z-index: 1000000;
+  }
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}

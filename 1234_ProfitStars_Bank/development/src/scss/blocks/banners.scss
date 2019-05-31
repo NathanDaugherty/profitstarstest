@@ -1,0 +1,156 @@
+.bannerImage__container {
+  .content {
+    img {
+      min-width:100%;
+    }
+  }
+}
+
+// .bannerVideo__container {
+//     #ytplayer {
+//         &.init {
+//             min-height: 300px;
+//             background-size: cover;
+//         }
+//     }
+//     border-right: none;
+//     border-left: none;
+//     position: relative;
+//     min-height: 100vh;
+//     background:rgba($gray-base,0.8);
+//     @media (max-width:1440px) {
+//         min-height:1px;
+//     }
+//     .caption {
+//         @media(min-width:$screen-sm-min) {
+//             position:absolute;
+//             top:0;
+//             bottom:0;
+//             left:0;
+//             right:0;
+//             z-index:3;
+//             //right:50%;
+//         }
+//         @media (max-width:$screen-xs-max) {
+//             background:$gray;
+//             padding:30px 10px;
+//             position:relative;
+//             bottom:0;
+//             left:0;
+//             right:0;
+//             z-index:4;
+//         }
+//         .container {
+//             position:relative;
+//             height:100%;
+//             margin:0 auto;
+//         }
+//         .content {
+//             @media(min-width:$screen-sm-min) {
+//                 padding:20px 0;
+//                 max-width:540px;
+//                 @include vertical-align(absolute);
+//                 top:56%;
+//             }
+//         }
+//         &.dark {
+//             div[data-content="content"] {
+//                 h1,h2,h3,h4,h5,h6 {
+//                     color:$white;
+//                     margin:0;
+//                 }
+//                 div, p {
+//                     font-size:40px;
+//                     margin-top:0;
+//                     font-weight:300;
+//                     color:$white;
+//                     line-height:1.25;
+//                     @media (max-width:$screen-sm-max) {
+//                         font-size:30px;
+//                     }
+//                     @media (max-width:$screen-xs-max) {
+//                         font-size:20px;
+//                     }
+//                 }
+//                 .btn {
+
+//                 }
+//             }
+//         }
+//         &.light {
+//             .content {
+//                 // * {
+//     //              color: $white;
+//     //          }
+//             }
+//         }
+//     }
+// }
+
+// .touch,.no-video {
+//     .bannerVideo__container {
+//         max-height:80vh;
+//     }
+//     .video-container {
+//         video,iframe {
+//             display: none;
+//         }
+//         .filter {
+//             display:none;
+//         }
+//         .poster {
+//             display: block !important;
+//             position:static;
+//             // width:100%;
+//             // height:100%;
+//             // min-height:300px;
+//             &:after {
+//                 content:" ";
+//                 @include overlay();
+//                 background:rgba($gray-base,0.45);
+//                 @media (max-width:$screen-xs-max) {
+//                     display:none;
+//                 }
+//             }
+//             img {
+//                 max-width:none;
+//                 min-width:100%;
+//                 @media (max-width:$screen-sm-max) {
+//                     max-width:100%;
+//                 }
+//                 width:auto;
+//             }
+//         }
+//     }
+// }
+
+// .video-container {
+//     // position: relative;
+//     // bottom: 0%;
+//     // left: 0%;
+//     // height: 100%;
+//     // width: 100%;
+//     // overflow: hidden;
+//     background: $gray-base;
+//     z-index:2;
+//     .filter {
+//         z-index: 100;
+//         position: absolute;
+//         top:0;
+//         bottom:0;
+//         background: rgba($gray-base, 0.4);
+//         width: 100%;
+//         z-index:2;
+//     }
+//     iframe,video {
+//         position: relative;
+//         z-index: 0;
+//         bottom: 0;
+//         width:100%;
+//         min-height:100vh;
+//         margin:0 0 -6px 0;
+//         @media (max-width:1440px) {
+//             min-height:200px;
+//         }
+//     }
+// }

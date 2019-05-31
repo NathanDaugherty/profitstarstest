@@ -1,0 +1,33 @@
+{{> partials/top-404 }}
+
+<body class="subpage error-page">
+  {{> partials/compliance}}
+  <div class="master-container">
+
+    {{> partials/header}}
+
+    <div class="container">
+
+      {{> partials/nav}}
+
+      <div id="main" tabindex="-1" class="error-page-body" role="main">
+          <div class="content" data-content-block="bodyCopy1" data-content="content" data-editable="editable">
+                {{#page.bodyCopy1}}
+                  {{& content}}
+                {{/page.bodyCopy1}}
+                <!-- @if NODE_ENV!='production' -->
+                  <h2>Error 404 - Page Not Found</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolore, voluptas ad eaque, asperiores dolorum et deserunt iusto at unde, quo reprehenderit fugiat quasi temporibus officiis sint aliquid quis laudantium nisi, amet expedita! Eaque quam alias itaque laborum et odio, sint ipsam! Harum, ratione tempore.</p>
+                <!-- @endif -->             
+          </div>
+      </div>
+    </div>
+
+      {{> partials/footer}}
+
+  </div>
+
+  {{> partials/scripts}}
+
+</body>
+</html>

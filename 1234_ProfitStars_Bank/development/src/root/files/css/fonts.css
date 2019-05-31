@@ -1,0 +1,192 @@
+/*
+
+
+
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/assets/font/pt_serif-web-regular.eot');
+    src: url('/assets/font/pt_serif-web-regular.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/pt_serif-web-regular.woff2') format('woff2'),
+         url('/assets/font/pt_serif-web-regular.woff') format('woff'),
+         url('/assets/font/pt_serif-web-regular.ttf') format('truetype'),
+         url('/assets/font/pt_serif-web-regular.svg#pt_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/assets/font/pt_serif-web-italic-webfont.eot');
+    src: url('/assets/font/pt_serif-web-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/pt_serif-web-italic-webfont.woff2') format('woff2'),
+         url('/assets/font/pt_serif-web-italic-webfont.woff') format('woff'),
+         url('/assets/font/pt_serif-web-italic-webfont.ttf') format('truetype'),
+         url('/assets/font/pt_serif-web-italic-webfont.svg#pt_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-italic.eot');
+    src: url('/assets/font/sourcesanspro-italic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-italic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-italic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-italic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-italic.svg#source_sans_proitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-regular.eot');
+    src: url('/assets/font/sourcesanspro-regular.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-regular.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-regular.woff') format('woff'),
+         url('/assets/font/sourcesanspro-regular.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-regular.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-lightitalic.eot');
+    src: url('/assets/font/sourcesanspro-lightitalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-lightitalic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-lightitalic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-lightitalic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-lightitalic.svg#source_sans_prolight_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-light.eot');
+    src: url('/assets/font/sourcesanspro-light.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-light.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-light.woff') format('woff'),
+         url('/assets/font/sourcesanspro-light.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-light.svg#source_sans_prolight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-extralightitalic.eot');
+    src: url('/assets/font/sourcesanspro-extralightitalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-extralightitalic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-extralightitalic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-extralightitalic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-extralightitalic.svg#source_sans_proXLtIt') format('svg');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-extralight.eot');
+    src: url('/assets/font/sourcesanspro-extralight.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-extralight.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-extralight.woff') format('woff'),
+         url('/assets/font/sourcesanspro-extralight.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-extralight.svg#source_sans_proextralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-semibold.eot');
+    src: url('/assets/font/sourcesanspro-semibold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-semibold.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-semibold.woff') format('woff'),
+         url('/assets/font/sourcesanspro-semibold.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-semibold.svg#source_sans_prosemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-semibolditalic.eot');
+    src: url('/assets/font/sourcesanspro-semibolditalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-semibolditalic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-semibolditalic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-semibolditalic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-semibolditalic.svg#source_sans_proSBdIt') format('svg');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-black.eot');
+    src: url('/assets/font/sourcesanspro-black.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-black.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-black.woff') format('woff'),
+         url('/assets/font/sourcesanspro-black.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-black.svg#source_sans_problack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-blackitalic.eot');
+    src: url('/assets/font/sourcesanspro-blackitalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-blackitalic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-blackitalic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-blackitalic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-blackitalic.svg#source_sans_problack_italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-bolditalic.eot');
+    src: url('/assets/font/sourcesanspro-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-bolditalic.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-bolditalic.woff') format('woff'),
+         url('/assets/font/sourcesanspro-bolditalic.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-bolditalic.svg#source_sans_probold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/font/sourcesanspro-bold.eot');
+    src: url('/assets/font/sourcesanspro-bold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/sourcesanspro-bold.woff2') format('woff2'),
+         url('/assets/font/sourcesanspro-bold.woff') format('woff'),
+         url('/assets/font/sourcesanspro-bold.ttf') format('truetype'),
+         url('/assets/font/sourcesanspro-bold.svg#source_sans_probold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+*/

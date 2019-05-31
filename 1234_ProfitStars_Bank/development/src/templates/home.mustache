@@ -1,0 +1,24 @@
+{{> partials/top}}
+
+<body class="home">
+   {{> partials/compliance}}
+
+   <div class="master-container">
+      <h1 class="sr-only">ProfitStars Bank Home Page</h1>
+      {{> partials/alert}}
+      {{> partials/header}}
+
+      <main id="main" tabindex="-1">
+         {{> blocks/slider-hero }}
+         {{> blocks/icon-links }}
+         {{> blocks/news-slider }}
+         {{> blocks/slider-subads }}
+      </main>
+
+      {{> partials/footer}}
+   </div>
+
+   {{> partials/scripts}}
+
+</body>
+</html>

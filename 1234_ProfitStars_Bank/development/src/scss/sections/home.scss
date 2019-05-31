@@ -1,0 +1,99 @@
+/* ===[ Hero Slider ]=== */
+.hero{
+   &-image{
+      overflow: hidden;
+
+      &, img{
+         height: 300px;
+      }
+
+      img{
+         width: auto;
+         max-width: none;
+         left: -50%;
+         position: relative;
+      }
+   }
+   &-caption{
+      h2{
+         font-size: 32px;
+      }
+      p{
+         font-size: 18px;
+      }
+      p, .btn{
+         font-weight: bold;
+      }
+      .btn{
+         @extend .all-caps;
+         border-radius: 0;
+         background: $blue;
+         font-size: 15px;
+         padding: 8px 20px;
+         margin-top: 10px;
+      }
+   }
+   .slick-arrow{
+      z-index: 100;
+      top: 90%;
+
+      &:before{
+         width: 30px;
+         height: 30px;
+         line-height: 1;
+         font-size: 20px;
+         color: #fff;
+      }
+   }
+   .icon-arrow{
+      &-left{
+         left: 40%;
+      }
+      &-right{
+         right: 40%;
+      }
+   }
+   @media only screen and (max-width: 329px){
+      .slick-arrow{
+         top: auto;
+         bottom: 0;
+
+         &:before{
+            color: $gray-light;
+            font-size: 24px;
+         }
+      }
+      .icon-arrow{
+         &-left{
+            left: 4px;
+         }
+         &-right{
+            right: 24px;
+         }
+      }
+   }
+   @media only screen and (min-width: 330px){
+      &-slide{
+         position: relative;
+      }
+      &-caption{
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 90%;
+         left: 5%;
+         z-index: 101;
+
+         .btn{
+            border: 1px solid $green;
+            background: rgba(#000, .25);
+         }
+      }
+      *{
+         color: #fff;
+      }
+   }
+   @media only screen and (max-width: 639px){
+      text-align: center;
+   }
+}

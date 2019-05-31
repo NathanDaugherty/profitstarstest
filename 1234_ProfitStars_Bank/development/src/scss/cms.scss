@@ -1,0 +1,65 @@
+@mixin contentTag() {
+	padding:6px 8px;
+	display:block;
+	position: absolute;
+	left:0;
+	top:0;
+	background:#333;
+	color:$white;
+	font-size:12px;
+	font-weight:200;
+}
+.edit {
+	.overlay {
+		display:none;
+	}
+	.success-container {
+		display:block!important;
+	}
+	.bannerImage__container, .hero__slider .hero__image {
+		div[data-content="content"] {
+			min-height:250px;
+			background:$gray-dark;
+		}
+	}
+	.hero__caption {
+		div[data-content="content"] {
+			min-width:150px;
+		}
+	}
+	
+	// .bannerVideo__container {
+	// 	height:auto!important;
+	// 	video,iframe,img {
+	// 		position:static!important;
+	// 	}
+	// 	div[data-content="content"] {
+	// 		width:100%;
+	// 		min-height:150px;
+	// 	}
+	// 	.video-container {
+	// 		position:relative;
+	// 		&:before {
+	// 			@include contentTag();
+	// 			z-index:4;
+	// 			content: "Video/Embedd Code";
+	// 		}
+	// 	}
+	// 	.poster {
+	// 		position:relative;
+	// 		&:before {
+	// 			@include contentTag();
+	// 			z-index:4;
+	// 			content: "Fallback Image";
+	// 		}
+	// 		display:block!important;
+	// 		img {
+
+	// 		}
+	// 	}
+	// }
+}
+// Add padding to editable areas
+div.mce-edit-focus {
+  padding: 5px;
+}

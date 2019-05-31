@@ -1,0 +1,108 @@
+ /*splitfilename=decoy.css*/
+
+//Core variables and mixins
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "custom/colors"; // custom theme functions
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "custom/functions";  // custom theme functions
+@import "custom/variables";  // custom theme variables
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "custom/mixins";
+@import "custom/flexbox";
+
+// Reset and dependencies
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+//@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+//@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+//@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+// @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+@import "icons";
+
+@import "custom/helpers";
+@import "custom/animate";
+@import "custom/type";
+@import "custom/buttons";
+@import "custom/forms";
+@import "custom/tables";
+@import "custom/slick";
+@import "custom/alert";
+
+@import "blocks/accordion";
+@import "blocks/banners";
+@import "blocks/modals";
+@import "blocks/sliders";
+@import "blocks/tabs";
+
+@import "sections/header";
+@import "sections/olb";
+@import "sections/main-navigation";
+@import "sections/home";
+@import "sections/subpages";
+@import "sections/atmlocator";
+@import "sections/footer";
+
+@import "ie";
+@import "cms";
+
+// @import "components/weather";
+// @import "components/stocks";
+// @import "components/ag";
+@import "components/accessibility";
+
+
+//setting the base font size on the html element so that rems can properly resize fonts
+html {
+	font-size:100%;
+}
+
+/*split*/
+/*splitfilename=KJESiteSpecific.css*/
+@import "KJEcalculator";
+/*split*/

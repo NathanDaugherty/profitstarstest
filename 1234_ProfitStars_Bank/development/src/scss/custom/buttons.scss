@@ -1,0 +1,107 @@
+// Buttons and their states when inside a .content area
+// NOTE: Change these color variables in the variables.scss file
+// ===================================================================================
+.btn {
+	@include transition-all(0.15s);
+	&.btn-default {
+		color: $btn-default-color;
+		background:$btn-default-bg;
+		border-color:$btn-default-border;
+		&:hover,&:focus {
+			color: $btn-default-bg;
+			background:$btn-default-color;
+			border-color:$btn-default-border;
+		}
+		&:active {
+		}
+	}
+	&.btn-primary {
+		color: $btn-primary-color;
+		background:$btn-primary-bg;
+		border-color:$btn-primary-border;
+		&:hover,&:focus {
+			color: $btn-primary-bg;
+			background:$btn-primary-color;
+			border-color:$btn-primary-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-info {
+		color: $btn-info-color;
+		background:$btn-info-bg;
+		border-color:$btn-info-border;
+		&:hover,&:focus {
+			color: $btn-info-bg;
+			background:$btn-info-color;
+			border-color:$btn-info-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-success {
+		color: $btn-success-color;
+		background:$btn-success-bg;
+		border-color:$btn-success-border;
+		&:hover,&:focus {
+			color: $btn-success-bg;
+			background:$btn-success-color;
+			border-color:$btn-success-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-warning {
+		color: $btn-warning-color;
+		background:$btn-warning-bg;
+		border-color:$btn-warning-border;
+		&:hover,&:focus {
+			color: $btn-warning-bg;
+			background:$btn-warning-color;
+			border-color:$btn-warning-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-danger {
+		color: $btn-danger-color;
+		background:$btn-danger-bg;
+		border-color:$btn-danger-border;
+		&:hover,&:focus {
+			color: $btn-danger-bg;
+			background:$btn-danger-color;
+			border-color:$btn-danger-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-inverse {
+		color: $btn-inverse-color;
+		background:$btn-inverse-bg;
+		border-color:$btn-inverse-border;
+		&:hover,&:focus {
+			color: $btn-inverse-bg;
+			background:$btn-inverse-color;
+			border-color:$btn-inverse-border;
+		}
+		&:active {
+
+		}
+	}
+	&.btn-large {
+		font-size:$font-size-large;
+		padding:10px 30px;
+	}
+	&.btn-small {
+		font-size:$font-size-small;
+	}
+	&.btn-mini {
+		font-size:$font-size-small - 2;
+		padding:4px 10px;
+	}
+}

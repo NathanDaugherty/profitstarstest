@@ -1,0 +1,72 @@
+//=====================================================================================
+
+// THIS FILE IS FOR REFERENCE ONLY--IT IS NOT LINKED TO THE MAIN.SCSS FILE OR 
+// INCLUDE IN OUTPUT. COPY THE QUERY AS NEEDED
+
+//=====================================================================================
+
+// xsmall only
+// Up to 479px
+@media screen and (max-width: rem-calc($screen-xs - 1)) {
+
+}
+
+// small up
+// From 480px and up
+@media screen and (min-width: rem-calc($screen-xs)) {
+
+}
+
+// small to tablet
+// From 480px to 767px
+@media screen and (min-width: rem-calc($screen-xs)) and (max-width: rem-calc($screen-xs-max)) {
+
+}
+
+// medium down
+// From 767px and down
+@media screen and (max-width: rem-calc($screen-xs-max)) {
+
+}
+
+// medium up
+// From 768px and up
+@media screen and (min-width: rem-calc($screen-sm)) {
+
+}
+
+// medium only
+// From 768px to 991px
+@media screen and (min-width: rem-calc($screen-sm)) and (max-width: rem-calc($screen-sm-max)) {
+
+}
+
+// large down
+// From 991px and down
+@media screen and (max-width: rem-calc($screen-sm-max)) {
+
+}
+
+// large up
+// From 992px and up
+@media screen and (min-width: rem-calc($screen-md)) {
+
+}
+
+// large only
+// From 992px to 1199
+@media screen and (min-width: rem-calc($screen-md)) and (max-width: rem-calc($screen-md-max)) {
+
+}
+
+// x-large down
+// From 1199px and down
+@media screen and (max-width: rem-calc($screen-md-max)) {
+
+}
+
+// x-large up
+// From 1200px and up
+@media screen and (min-width: rem-calc($screen-lg)) {
+
+}

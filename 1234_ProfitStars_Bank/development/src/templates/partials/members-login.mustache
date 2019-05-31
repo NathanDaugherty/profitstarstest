@@ -1,0 +1,38 @@
+ <!-- HTML for Members login component -->
+<banno:member-login landingPage="/member-page"></banno:member-login>
+<!-- End of Members Login -->
+
+<!-- @if NODE_ENV!='production' -->
+	<div class="banno-members-wrapper">
+		<div class="banno-members-container">
+		  <div class="banno-members-login-container">
+			<form action="/member-page" id="banno-members-login">
+				<input type="email" name="email" class="email" placeholder="name@example.com" id="login-email">
+				<input type="password" name="password" autocomplete="off" class="password" placeholder="Password" id="login-password">
+				<button type="submit" class="banno-members-submit btn btn-primary btn-large" id="banno-members-login-btn">Login</button>
+			</form>
+			<a class="banno-members-link" id="reset-pass-control" href="#">Forgot password?</a>
+		  </div>
+		  <div class="banno-members-reset-container hide">
+			<form method="post" id="banno-members-reset">
+				<p class="banno-members-text">Enter your email and we'll send you a link to reset your password.</p>
+				<input type="email" class="email" placeholder="name@example.com" id="forgot-email">
+				<button type="submit" class="banno-members-submit btn btn-primary btn-large" id="banno-members-reset-btn">Send</button>
+			</form>
+			<a class="banno-members-link" id="login-control" href="#">Nevermind, I remember now.</a>
+			</div>
+		</div>
+		<div class="alert alert-block alert-error hide" id="login-error">
+			<h4 class="alert-heading">Unable to login!</h4>
+			Double check your login credentials and try again.
+		</div>
+		<div class="alert alert-block alert-error hide" id="reset-error">
+			<h4 class="alert-heading">Unable to reset password!</h4>
+			Double check your email and try again.
+		</div>
+		<div class="alert alert-block alert-info hide" id="reset-confirm">
+			<h4 class="alert-heading">Check your email.</h4>
+			We're sending you an email with a link to reset your password.
+		</div>
+	</div>
+<!-- @endif -->

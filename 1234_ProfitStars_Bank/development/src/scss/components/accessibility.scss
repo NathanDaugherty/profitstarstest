@@ -1,0 +1,126 @@
+.accessibility {
+  .accessibility-link {
+    color: #4d4d4d;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 12px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      background-size: 47px auto;
+      width: 47px;
+      height: 33px;
+      display: inline-block;
+      @include translate(0, -50%);
+    }
+    &::before {
+      background-image: url("/assets/img/ada-static.svg");
+    }
+    &::after {
+      background-image: url("/assets/img/ada-hover.svg");
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+      .accessibility-text {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.footer {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 8px 0;
+    .accessibility-link {
+      position: relative;
+      color: #4d4d4d;
+      padding-left: 65px;
+      display: inline-block;
+      &::after, &::before {
+        left: 0;
+      }
+      .accessibility-text {
+        display: inline-block;
+        line-height: 34px;
+      }
+      &:hover {
+        padding-left: 70px;
+        @include transition(padding-left 0.3s ease-in-out);
+      }
+    }
+  }
+  // &.side-stick {
+  //   position: fixed;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 2;
+  //   .accessibility-link {
+  //     position: relative;
+  //     display: block;
+  //     height: 50px;
+  //     padding: 7px 10px 7px 52px;
+  //     text-align: left;
+  //     border-radius: 0 5px 0 0;
+  //     @include transition(background-color 0.3s ease-in-out);
+  //     &::after, &::before {
+  //       left: 15px;
+  //     }
+  //     .accessibility-text {
+  //       opacity: 0;
+  //       visibility: hidden;
+  //       position: absolute;
+  //       width: 125px;
+  //       left: 72px;
+  //     }
+  //     &:hover {
+  //       background-color: #fff;
+  //       width: 222px;
+  //       padding-left: 72px;
+  //       padding-right: 25px;
+  //       @include box-shadow(1px 1px 3px 1px rgba(0,0,0,.2));
+  //       .accessibility-text {
+  //         opacity: 1;
+  //         visibility: visible;
+  //         @include transition(opacity 0.3s ease-in-out, visibility 0.3s ease-in-out);
+  //       }
+  //     }
+  //   }
+  // }
+  // &.sticky-footer {
+  //   position: fixed;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 2;
+  //   width: 100%;
+  //   background-color: #f2f2f2;
+  //   padding: 8px 0;
+  //   .accessibility-link {
+  //     position: relative;
+  //     color: #4d4d4d;
+  //     padding-left: 65px;
+  //     display: inline-block;
+  //     &::after, &::before {
+  //       left: 0;
+  //     }
+  //     .accessibility-text {
+  //       display: inline-block;
+  //       line-height: 34px;
+  //     }
+  //     &:hover {
+  //       padding-left: 70px;
+  //       @include transition(padding-left 0.3s ease-in-out);
+  //     }
+  //   }
+  // }
+}

@@ -1,0 +1,119 @@
+// Main Full-width hero slider
+// =================================================
+.hero__slider {
+	//margin-bottom:0;
+	div[data-content="content"] {
+		h1,h2,h3,h4,h5,h6 {
+
+		}
+		h1 {
+			font-size:$hero-font-size-h1;
+		}
+		h2 {
+			font-size:$hero-font-size-h2;	
+		}
+		h3 {
+			font-size:$hero-font-size-h3;	
+		}
+		h4 {
+			font-size:$hero-font-size-h4;	
+		}
+		h5 {
+			font-size:$hero-font-size-h5;	
+		}
+		h6 {
+			font-size:$hero-font-size-h6;	
+		}
+		div, p {
+
+		}
+		.btn {
+
+		}
+	}
+	.hero__slide {
+		position:relative;
+	}
+	.hero__image {
+		font-size:0;
+		img {
+			min-width:100%;
+			@media (max-width:$screen-sm-max) {
+				min-height:400px;
+				max-width:none;
+			}
+			// @media (max-width:$screen-xs-max) {
+			// 	position:relative;
+			// 	margin-left:-200px;
+			// }
+		}
+	}
+	.hero__caption {
+		@media(min-width:$screen-sm-min) {
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			//right:50%;
+		}
+		.container {
+			position:relative;
+			height:100%;
+			margin:0 auto;
+		}
+		.content {
+			@media(min-width:$screen-sm-min) {
+				padding:20px 0;
+				@include vertical-align(absolute);
+			}
+		}
+	}
+	.slick-dots {
+		bottom:-40px;
+		li {
+			button {
+				background:$gray;
+				border-radius:100%;
+				&:before {
+					color:transparent;
+				}
+			}
+			&.slick-active {
+				button {
+					background:$brand-primary;
+				}
+			}
+		}
+	}
+}
+
+// Four block sub ad features slider section
+// =================================================
+.subads__container {
+	.subads__slider {
+		.subads__slide {
+			.subads__image {
+				.subads__image__overlay {
+
+				}
+			}
+			.subads__content {
+				.inside {
+
+				}
+				div[data-content="content"] {
+
+				}
+			}
+		}
+	}
+	.swiper {
+		display:none;
+		@media(max-width:$screen-xs-max) {
+			display:block;
+			text-align:center;
+			padding:20px;
+		}
+	}
+}

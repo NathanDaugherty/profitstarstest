@@ -1,0 +1,36 @@
+<div class="form-group captcha-container">
+	<banno:captcha></banno:captcha>
+	<!-- @if NODE_ENV!='production' -->
+		<div class="b-captcha" style="">
+			<div id="form-catpcha-image" class="b-captcha-box b-captcha-image">
+				<div class="b-captcha-container">
+					<img id="captcha" src="/assets/img/placeholder/captch-example.png" alt="Image Captcha">
+				</div>
+				<div class="b-captcha-instuctions">Enter the characters you see</div>
+			</div>
+
+			<div id="form-captcha-audio" class="b-captcha-box b-captcha-audio" style="display: none;">
+				<div class="b-captcha-container">
+					<a href="javascript:void(0);" id="audio-captcha-play" data-disclaimer-id="null">Play Audio</a> <br>
+					<a href="javascript:void(0);" id="audio-captcha-download" target="_blank" data-disclaimer-id="null">Download Audio<span class="sr-only"> (Opens in a new Window)</span></a>
+					<div id="b-captcha-audio-holder" style="speak:none;max-width:1px;max-height:1px;"></div>
+				</div>
+				<div class="b-captcha-instuctions">Enter the characters you hear</div>
+			</div>
+
+			<div id="form-captcha-controls" class="b-captcha-box b-captcha-controls">
+				<a href="javascript:void(0);" id="showAudioCaptcha" class="b-captcha-image b-captcha-switch" data-disclaimer-id="null">Audio Captcha</a>
+				<a href="javascript:void(0);" id="newImageCaptcha" class="b-captcha-image b-captcha-refresh" data-disclaimer-id="null">Refresh</a>
+				<a href="javascript:void(0);" id="showImageCaptcha" class="b-captcha-audio b-captcha-switch" data-disclaimer-id="null" style="display: none;">Image Captcha</a>
+				<a href="javascript:void(0);" id="newAudioCaptcha" class="b-captcha-audio b-captcha-refresh" data-disclaimer-id="null" style="display: none;">Refresh</a>
+			</div>
+
+			<div class="b-captcha-answer">
+				<input type="text" id="captchaIdInput" name="captchaId" style="display:none;speak:none;">
+				<label for="captchaAnswer" class="visuallyhidden sr-only">Captcha Answer</label>
+				<input type="text" class="b-captcha-answer-input" id="captchaAnswer" name="captchaAnswer" autocomplete="off" required="required">
+			</div>
+		</div>
+	<!-- @endif -->
+	<div class="spacer-20"></div>
+</div>

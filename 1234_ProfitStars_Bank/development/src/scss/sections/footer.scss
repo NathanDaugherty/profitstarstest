@@ -1,0 +1,43 @@
+// FOOTER STYLES
+// =========================================================================================================
+
+footer.footer {
+	background:$gray;
+	padding:40px 0;
+	// margin-top:40px;
+	* {
+		color:$white;
+		font-size:$font-size-base;
+	}
+	a {
+		text-decoration:underline;
+		&:hover,&:focus {
+			text-decoration:none;
+		}
+	}
+	.container {
+
+	}
+	.banno-menu {
+		@extend .list-inline;
+		@media (max-width:$screen-xs-max) {
+			li {
+				display:block;
+				text-align:center;
+				margin-bottom:10px;
+			}
+		}
+	}
+	// .copyright {
+
+	// 	@media (max-width:$screen-xs-max) {
+	// 		display:block;
+	// 		margin-top:40px;
+	// 		.ehl,.copytext,.fdic {
+	// 			display:block;
+	// 			text-align:center;
+	// 			margin-bottom:8px;
+	// 		}
+	// 	}
+	// }
+}

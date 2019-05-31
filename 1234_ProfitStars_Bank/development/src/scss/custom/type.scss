@@ -1,0 +1,89 @@
+// Type for content editors in body copy
+// ===================================================================================
+// * {
+//   -webkit-font-smoothing: antialiased;
+// }
+
+h1,.h1 {
+	font-size:$font-size-h1;
+}
+h2,.h2 {
+	font-size:$font-size-h2;
+}
+h3,.h3 {
+	font-size:$font-size-h3;
+}
+h4,.h4 {
+	font-size:$font-size-h4;
+}
+h5,.h5 {
+	font-size:$font-size-h5;
+}
+h6,.h6 {
+	font-size:$font-size-h6;
+}
+.content {
+	@include clearfix;
+
+	img.pull-left {
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+	img.pull-right {
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+	// i {
+	//   display: inline-block;
+	//   vertical-align: top;
+	// }
+	div,p,li,td {
+		font-size:$font-size-base;
+	}
+	.small,.sm {
+		font-weight:200;
+		font-size:$font-size-base - 1;
+	}
+	.smallest,.xs {
+		font-weight:200;
+		font-size:$font-size-base - 2;
+	}
+	.big {
+		font-weight:200;
+		font-size:$font-size-base + 1;
+	}
+	.biggest {
+		font-weight:200;
+		font-size:$font-size-base + 2;
+	}
+	blockquote {
+		
+	}
+}
+
+
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (min-width: $screen-sm-min) {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
+}
+
+@media (min-width: $screen-md-min) {
+  .text-md-left { text-align: left; }
+  .text-md-right { text-align: right; }
+  .text-md-center { text-align: center; }
+  .text-md-justify { text-align: justify; }
+}
+
+@media (min-width: $screen-lg-min) {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
+}

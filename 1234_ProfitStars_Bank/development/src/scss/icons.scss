@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Icons";
+	src: url('/assets/font/Icons.eot');
+	src: url('/assets/font/Icons.eot?#iefix') format('eot'),
+		url('/assets/font/Icons.woff2') format('woff2'),
+		url('/assets/font/Icons.woff') format('woff'),
+		url('/assets/font/Icons.ttf') format('truetype'),
+		url('/assets/font/Icons.svg#Icons') format('svg');
+}
+
+.icon:before {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-arrow-left:before {
+	content: "\E001";
+}
+
+.icon-arrow-right:before {
+	content: "\E002";
+}
+
+.icon-contact:before {
+	content: "\E003";
+}
+
+.icon-ehl:before {
+	content: "\E004";
+}
+
+.icon-facebook:before {
+	content: "\E005";
+}
+
+.icon-fdic:before {
+	content: "\E006";
+}
+
+.icon-linkedin:before {
+	content: "\E007";
+}
+
+.icon-profitstars:before {
+	content: "\E008";
+}
+
+.icon-search:before {
+	content: "\E009";
+}
+
+.icon-twitter:before {
+	content: "\E00A";
+}

@@ -1,0 +1,176 @@
+{{> partials/top}}
+<body class="subpage locator">
+	
+  {{> partials/compliance}}
+
+	<div class="master-container">
+
+	    {{> partials/header}}
+
+	    <div class="container">
+
+	      	{{> partials/nav}}
+
+			<div id="main" tabindex="-1" role="main">
+				<h1 class="page-title">{{page.title}}<!-- @if NODE_ENV!='production' -->Hours &amp; Locations<!-- @endif --></h1>
+			  	<!-- Below are the banno tags -->
+			      	<div class="map">
+				        <!-- Location Map -->
+				        	<banno:location-map></banno:location-map>
+				        <!-- Location Map -->
+				        <!-- @if NODE_ENV!='production' --> 
+			                <!-- Start of Map Tag -->
+			         			{{>partials/google-map}}
+			          		<!-- End of Map Tag -->       
+			            <!-- @endif -->
+			      	</div>
+
+			      <!-- Location Search -->
+			      <banno:location-search></banno:location-search>
+			      <!-- Optional Tag -> <banno:location-search refine-visible="true"></banno:location-search> -->
+			      	<!-- @if NODE_ENV!='production' --> 
+			              <!-- Search Tag -->
+				            <strong class="banno-location-example-heading">Enter an address, Zip code or city and state to begin your search</strong>
+				            <div class="banno-location-example-container">
+				              <span clas="banno-location-for-example">For example, </span>
+				              <span class="banno-location-example" id="example-address">531 Broad Street Chattanooga TN 37402</span>
+				            </div>
+				            <form id="locationSearchForm" role="search" class="banno-location-search-form">
+				              <fieldset class="banno-location-search-fields">
+				                <div class="banno-location-search-fields">
+				                  <input type="search" class="banno-location-search-input" id="location" required="required" aria-required="true" placeholder="Enter a location">
+				                  <button class="btn btn-primary banno-location-search-button" id="locationSearch" type="button" role="button">Search</button>
+				                </div>
+				                <a data-toggle="collapse" href="#refineSearch" class="banno-location-collapse-trigger">Refine your search</a>
+				                <div class="collapse" id="refineSearch">
+				                  <div class="banno-location-proximity-container">
+				                    <label for="locationProximity">Proximity:</label>
+				                    <select class="banno-location-proximity" id="locationProximity">
+				                      <option value="5">Within 5 miles</option>
+				                      <option value="10">Within 10 miles</option>
+				                      <option value="15">Within 15 miles</option>
+				                      <option value="20">Within 20 miles</option>
+				                      <option value="25">Within 25 miles</option>
+				                      <option value="50">Within 50 miles</option>
+				                      <option value="100">Within 100 miles</option>
+				                      <option value="250">Within 250 miles</option>
+				                      <option value="500">Within 500 miles</option>
+				                    </select>
+				                  </div>
+				                  <div class="banno-location-toggles">
+				                    <div class="banno-location-branches banno-location-items">
+				                      <label class="checkbox" id="branchLabel">
+				                        <input type="checkbox" name="refine" id="Branches">
+				                        Branches
+				                      </label>
+				                    </div>
+				                    <div class="banno-location-atms banno-location-items">
+				                      <label class="checkbox" id="ATMLabel">
+				                        <input type="checkbox" name="refine" id="ATMs">
+				                        ATMs
+				                      </label>
+				                      <div id="atmsToggleList" class="banno-location-atms-list">
+				                        <label class="checkbox">
+				                          <input class="atm-network" type="checkbox" name="refine" id="moneypass" checked=""> MoneyPass  
+				                        </label>
+				                        <label class="checkbox">
+				                          <input class="atm-network" type="checkbox" name="refine" id="fsg-bank" checked=""> FSG Bank  
+				                        </label>
+				                      </div>
+				                    </div>
+				                  </div>
+				                </div>
+				              </fieldset>
+				            </form>   
+				            <!-- End of Search Tag -->
+			        <!-- @endif -->
+
+			      <!-- END Location Search -->
+
+			      <banno:location-list></banno:location-list>
+			      <!--  Optional Tag -> <banno:location-list networks="0, 1, 2, branches"></banno:location-list> -->
+						<!-- @if NODE_ENV!='production' -->
+							<!-- Location list Tag -->
+				              	<div id="locationListContainer" class="banno-location-list-container" networks="">
+				                	<div class="banno-location-results">Showing results in <strong>531 Broad Street, Chattanooga, TN 37402, USA</strong>
+				                	</div>
+				                	<input type="hidden" id="current_page" value="0">
+					                <table id="locationTable" class="table table-bordered table-striped banno-location-table" style="display: table;">
+					                  <thead>
+					                    <tr scope="row">
+					                      <th colspan="2">
+					                        <span class="banno-location-table-heading">
+					                          Search results
+					                        </span>
+					                      </th>
+					                    </tr>
+					                  </thead>
+					                  <tbody id="locationListBody">
+					                    <tr class="marker-click" marker-index="0" style="display: table-row;">
+					                      <td>
+					                        <img src="/assets/img/location-pins/branch.png">
+					                      </td>
+					                      <td itemscope="" itemtype="http://schema.org/BankOrCreditUnion">
+					                        <address>
+					                          <strong itemprop="name">Main Office</strong>
+					                          <div class="banno-location-address" itemscope="" itemtype="http://schema.org/PostalAddress">
+					                            <span itemprop="streetAddress">531 Broad Street</span><br>
+					                            <span itemprop="addressLocality">Chattanooga</span>, <span itemprop="addressRegion">TN</span> <span itemprop="postalCode">37402</span><br>
+					                            <span itemprop="telephone">423-308-2000</span>
+					                          </div>
+					                        </address>
+					                        <div class="banno-location-description" itemprop="description">
+					                          <b>Hours</b><div>Lobby:<br></div><div>Mon - Thur 9:00 - 4:00</div><div>Fri 9:00 - 5:30</div>
+					                        </div>
+					                        <div class="banno-location-distance">0.00 miles</div>
+					                        <a href="http://maps.google.com/maps?saddr=&amp;daddr=531 Broad Street Chattanooga 37402" target="_blank" class="banno-location-directions external" data-disclaimer-id="disclaimer" itemprop="map">Get Directions</a>
+					                      </td>
+					                    </tr>
+					                    <tr class="marker-click" marker-index="0" style="display: table-row;">
+					                      <td>
+					                        <img src="/assets/img/location-pins/branch.png">
+					                      </td>
+					                      <td itemscope="" itemtype="http://schema.org/BankOrCreditUnion">
+					                        <address>
+					                          <strong itemprop="name">Main Office</strong>
+					                          <div class="banno-location-address" itemscope="" itemtype="http://schema.org/PostalAddress">
+					                            <span itemprop="streetAddress">531 Broad Street</span><br>
+					                            <span itemprop="addressLocality">Chattanooga</span>, <span itemprop="addressRegion">TN</span> <span itemprop="postalCode">37402</span><br>
+					                            <span itemprop="telephone">423-308-2000</span>
+					                          </div>
+					                        </address>
+					                        <div class="banno-location-description" itemprop="description">
+					                          <b>Hours</b><div>Lobby:<br></div><div>Mon - Thur 9:00 - 4:00</div><div>Fri 9:00 - 5:30</div>
+					                        </div>
+					                        <div class="banno-location-distance">0.00 miles</div>
+					                        <a href="http://maps.google.com/maps?saddr=&amp;daddr=531 Broad Street Chattanooga 37402" target="_blank" class="banno-location-directions external" data-disclaimer-id="disclaimer" itemprop="map">Get Directions</a>
+					                      </td>
+					                    </tr>
+					                  </tbody>
+					                </table>
+					                <div class="pagination banno-location-pagination">
+					                  <ul id="page_navigation">
+					                    <li class="disabled previous_link"><a href="#locationTable">Prev</a></li>
+					                    <li class="active page_link"><a href="#locationTable" longdesc="0">1</a></li>
+					                    <li class="page_link"><a href="#locationTable" longdesc="1">2</a></li>
+					                    <li class="page_link"><a href="#locationTable" longdesc="2">3</a></li>
+					                    <li class="page_link"><a href="#locationTable" longdesc="3">4</a></li>
+					                    <li class="next_link"><a href="#locationTable">Next</a></li>
+					                  </ul>
+					                </div>
+				              	</div>  
+			              	<!-- End Of Location List -->
+						<!-- @endif -->
+			      <!-- Below is the markup for the atm locator tags -->
+			</div>
+
+		</div>
+
+	    {{> partials/footer}}
+
+	</div>
+
+{{> partials/scripts}}
+
+</body>
+</html>

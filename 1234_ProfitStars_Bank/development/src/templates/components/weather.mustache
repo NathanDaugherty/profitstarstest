@@ -1,0 +1,59 @@
+<banno:weather></banno:weather>
+<!-- @if NODE_ENV!='production' -->
+	<div class="b-weather" b-weather-location="63452" b-weather-celsius="false">
+		<div class="b-weather-inner">
+			<div class="b-weather-display">
+				<div class="b-weather-row b-weather-now">
+					<span class="b-weather-day">Now</span>
+					<img class="b-weather-ico b-weather-current-icon" src="/assets/img/weather/32.png">
+					<span class="b-weather-temp b-weather-current-temp">42°</span>
+				</div>
+				<div class="b-weather-row b-weather-2">
+					<span class="b-weather-day">Fri</span>
+					<img class="b-weather-ico" src="/assets/img/weather/28.png">
+					<span class="b-weather-temp b-weather-high">41°</span>
+					<span class="b-weather-temp b-weather-low">28°</span>
+				</div>
+				<div class="b-weather-row b-weather-3">
+					<span class="b-weather-day">Sat</span>
+					<img class="b-weather-ico" src="/assets/img/weather/11.png">
+					<span class="b-weather-temp b-weather-high">48°</span>
+					<span class="b-weather-temp b-weather-low">28°</span>
+				</div>
+				<div class="b-weather-row b-weather-4">
+					<span class="b-weather-day">Sun</span>
+					<img class="b-weather-ico" src="/assets/img/weather/41.png">
+					<span class="b-weather-temp b-weather-high">36°</span>
+					<span class="b-weather-temp b-weather-low">27°</span>
+				</div>
+				<div class="b-weather-row b-weather-5">
+					<span class="b-weather-day">Mon</span>
+					<img class="b-weather-ico" src="/assets/img/weather/41.png">
+					<span class="b-weather-temp b-weather-high">36°</span>
+					<span class="b-weather-temp b-weather-low">19°</span>
+				</div>
+			</div>
+			<div class="b-weather-details">
+				<div class="b-weather-city-info">
+					<span class="b-weather-city">Lewistown, MO</span>
+					<span class="b-weather-info"></span>
+				</div>
+			</div>
+			<div class="b-weather-settings hide">
+				<form class="b-weather-search-form" action="">
+					<input class="b-weather-search-input">
+					<button type="submit" class="btn success b-weather-search-btn">FIND</button>
+				</form>
+				<form class="b-weather-settings-form" action="">
+					<select class="b-weather-results"></select>
+					<div class="b-weather-settings-degrees">
+						<label><input type="radio" name="scale" value="false" checked="checked">°F</label>
+						<label><input type="radio" name="scale" value="true">°C</label>
+					</div>
+					<button type="submit" class="b-weather-ok-btn btn success" disabled="disabled">OK</button>
+					<button type="button" class="b-weather-cancel-btn btn">Cancel</button>
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- @endif -->

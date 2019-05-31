@@ -1,0 +1,74 @@
+{{> partials/top}}
+<body class="subpage calculator">
+  {{> partials/compliance}}
+  
+<div class="master-container">
+
+    {{> partials/header}}
+
+    <div class="container">
+
+      {{> partials/nav}}
+
+      <div id="main" tabindex="-1" role="main">
+          <div class="row">
+              
+              <div class="col-lg-9 col-md-7">
+                  <h1 class="page-title">{{page.title}}<!-- @if NODE_ENV!='production' -->Financial Calculators<!-- @endif --></h1>
+                  <div class="content" data-content-block="bodyCopy1" data-content="content" data-editable="editable">
+                    {{#page.bodyCopy1}}
+                      {{& content}}
+                    {{/page.bodyCopy1}}
+                    <!-- @if NODE_ENV!='production' --> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                     <!-- @endif -->
+                  </div>
+
+                  <div class="accordion-area remove-blank">
+                      {{> blocks/accordion}}
+                      <div class="spacer-30"></div>
+                  </div>
+
+                  <div class="content" data-content-block="bodyCopy2" data-content="content" data-editable="editable" >
+                    {{#page.bodyCopy2}}
+                        {{& content}}
+                      {{/page.bodyCopy2}}
+                      <!-- @if NODE_ENV!='production' -->
+                          <h5>Third content area</h5>
+                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis explicabo, dicta totam beatae tempore, vitae suscipit officia illum asperiores dolore harum cum cupiditate quidem alias? Delectus, quasi dignissimos asperiores consectetur. Explicabo, dolorem ullam aliquam assumenda autem odit nobis perferendis rerum itaque deleniti fugit inventore, officia nam eveniet voluptate? Cum saepe quod, nobis debitis autem, quam distinctio voluptatem dolorum beatae. Vitae magni voluptatem voluptate? Placeat, maiores?</div>
+                      <!-- @endif -->
+                  </div>
+
+              </div>
+
+              <div class="col-lg-3 col-md-5">
+                 <div class="content" data-content-block="bodyCopy3" data-content="content" data-editable="editable">
+                    {{#page.bodyCopy3}}
+                      {{& content}}
+                    {{/page.bodyCopy3}}
+                    <!-- @if NODE_ENV!='production' --> 
+                        <h2>Related Links</h2>
+                        <ul>
+                          <li><a href="">Lorem ipsum dolor sit.</a></li>
+                          <li><a href="">Harum nobis, nisi commodi?</a></li>
+                          <li><a href="">Aperiam, sequi quos reprehenderit. Lorem ipsum dolor sit amet.</a></li>
+                          <li><a href="">Laboriosam vero obcaecati ipsa?</a></li>
+                          <li><a href="">Accusamus, dolores nobis voluptate.</a></li>
+                        </ul>
+                    <!-- @endif -->
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+    
+    </div>
+
+    {{> partials/footer}}
+
+</div>
+
+  {{> partials/scripts}}
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<banno:stock></banno:stock>
+<!-- @if NODE_ENV!='production' -->
+	<div class="b-stocks" default-symbol="^IXIC,NYA,^NYA-SM">
+			<div class="b-stocks-loading" style="display: none;">
+				<div class="b-stocks-loading-img"></div>
+			</div>
+			<div class="b-stocks-error" style="display: none;">
+				<span>I am sorry, an error has occurred.</span>
+			</div>
+			<div class="b-stocks-inner" style="display: block;">
+				<table class="b-stocks-display">
+					<tbody class="b-stocks-table-body">
+						<tr class="row">
+							<td>
+								<span class="b-stocks-symbol">^IXIC</span>
+								<span class="b-stocks-name">NASDAQ Composite</span>         
+							</td>         
+							<td>
+								<span class="b-stocks-price">3581.31</span>
+							</td>         
+							<td>
+								<span class="b-stocks-change b-stocks-gain">+3.01</span>
+							</td>
+						</tr>
+						<tr class="row">
+							<td>
+								<span class="b-stocks-symbol">NYA</span>
+								<span class="b-stocks-name">NYA</span>
+							</td>
+							<td>
+								<span class="b-stocks-price">0.00</span>
+							</td>
+							<td>
+								<span class="b-stocks-change b-stocks-loss">N/A</span>         
+							</td>        
+						</tr>
+						<tr class="row">
+							<td>          
+								<span class="b-stocks-symbol">^NYA-SM</span>          
+								<span class="b-stocks-name">NYSE COMPOSITE IN</span>         
+							</td>         
+							<td>          
+								<span class="b-stocks-price">828.514</span>         
+							</td>         
+							<td>          
+								<span class="b-stocks-change b-stocks-gain">0.00</span>         
+							</td>        
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="4">
+								<span class="b-stocks-add-stock">Add a Stock</span>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				<div class="b-stocks-options" style="display:none;">
+					<div class="b-stocks-options-header">
+						<span class="b-stocks-options-text">Add a Stock</span>
+						<span class="b-stocks-options-close">×</span>
+					</div>
+					<div class="b-stocks-options-inner">
+						<form class="b-stocks-find">
+							<input type="text" class="b-stocks-search-input" placeholder="Enter symbol or name">
+							<button type="submit" class="btn b-stocks-search-btn">Find</button>
+						</form>
+						<form class="b-stocks-search" style="display: none;">
+							<select class="b-stocks-selection"></select>
+							<button type="button" class="btn btn-primary b-stocks-add-btn">
+								<span>Add</span>
+							</button>
+						</form>
+						<div class="b-stocks-search-error" style="display:none">
+							<span>No results were found. Try again.</span>
+						</div>
+						<div class="b-stocks-dupes" style="display:none">
+							<span>This stock is already in the list.</span>
+						</div>
+					</div>
+				</div>
+				<div class="b-stocks-overlay" style="position: absolute; top: 0px; right: 0px; width: 100%; height: 51px; display: none;">
+					<input type="button" class="btn b-stocks-remove-button" value="Remove">
+				</div>
+			</div>
+	</div>
+<!-- @endif -->

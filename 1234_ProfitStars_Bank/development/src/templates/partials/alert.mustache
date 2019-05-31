@@ -1,0 +1,13 @@
+<div class="alert hidden-alert" id="alertBox">
+   <div class="container">
+      <div data-content-block="alertCopy" data-content="content" data-editable="editable" class="alert-body">
+         {{#page.alertCopy}}
+            {{& content}}
+         {{/page.alertCopy}}
+         <!-- @if NODE_ENV!='production' -->
+         <p>We will be closed on Monday, May 30th, in observance of Memorial Day and will reopen Tuesday, May 31st.</p>
+         <!-- @endif -->
+      </div>
+      <button class="close" data-parent="#alertBox"><span class="sr-only">Close Alert</span>&times;</button>
+   </div>
+</div>

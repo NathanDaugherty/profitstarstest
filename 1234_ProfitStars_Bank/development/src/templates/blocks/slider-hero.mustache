@@ -1,0 +1,85 @@
+<div class="hero">
+    <div class="slider hero-slider remove-blank">
+      <div class="hero-slide remove-blank">
+          <div class="hero-image">
+              <div data-content-block="hero1image" data-content="content" data-editable="editable">
+                {{#page.hero1image}}
+                  {{& content}}
+                {{/page.hero1image}}
+
+                <!-- @if NODE_ENV!='production' -->
+                <img src="/assets/img/hero1.jpg" alt="Slide 1">
+                <!-- @endif -->
+              </div>
+          </div>
+          <div class="hero-caption">
+            <div class="container">
+                <div class="content" data-content-block="hero1content" data-content="content" data-editable="editable" >
+                  {{#page.hero1content}}
+                    {{& content}}
+                  {{/page.hero1content}}
+                  <!-- @if NODE_ENV!='production' -->
+                      <h2>Banking Made Easy</h2>
+                      <p>for your busy schedule</p>
+                      <p><a href="#" class="btn btn-default">Mobile Banking</a></p>
+                  <!-- @endif -->
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="hero-slide remove-blank">
+          <div class="hero-image">
+              <div data-content-block="hero2image" data-content="content" data-editable="editable">
+                {{#page.hero2image}}
+                  {{& content}}
+                {{/page.hero2image}}
+
+                <!-- @if NODE_ENV!='production' -->
+                <img src="/assets/img/hero1.jpg" alt="Slide 1">
+                <!-- @endif -->
+              </div>
+          </div>
+          <div class="hero-caption">
+            <div class="container">
+                <div class="content" data-content-block="hero2content" data-content="content" data-editable="editable" >
+                  {{#page.hero2content}}
+                    {{& content}}
+                  {{/page.hero2content}}
+                  <!-- @if NODE_ENV!='production' -->
+                      <h2>Mad Crazy Banking</h2>
+                      <p>Set your investments on fire!</p>
+                      <p><a href="#" class="btn btn-primary">Investments</a></p>
+                  <!-- @endif -->
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="hero-slide remove-blank">
+          <div class="hero-image">
+              <div data-content-block="hero3image" data-content="content" data-editable="editable">
+                {{#page.hero3image}}
+                  {{& content}}
+                {{/page.hero3image}}
+
+                <!-- @if NODE_ENV!='production' -->
+                <img src="/assets/img/hero1.jpg" alt="Slide 1">
+                <!-- @endif -->
+              </div>
+          </div>
+          <div class="hero-caption">
+            <div class="container">
+                <div class="content" data-content-block="hero3content" data-content="content" data-editable="editable" >
+                  {{#page.hero3content}}
+                    {{& content}}
+                  {{/page.hero3content}}
+                  <!-- @if NODE_ENV!='production' -->
+                      <h2>Liquidation in a Snap</h2>
+                      <p>We can help get rid of half your stuff so you can prosper.</p>
+                      <p><a href="#" class="btn btn-warning">Explore Options</a></p>
+                  <!-- @endif -->
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

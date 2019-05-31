@@ -1,0 +1,40 @@
+// Subpage
+// =========================================================================================================
+.page-title {
+  margin-bottom:20px;
+}
+
+// Search page
+// =========================================================================================================
+
+.search-container {
+  margin-top: 20px;
+  .search-item {
+    border-bottom:1px solid $gray-lighter;
+    padding-bottom:15px;
+    a {
+      display:inline-block;
+    }
+  }
+}
+.search-results-form,.search-form {
+  .list-inline {
+    margin-top:20px;
+    @extend .clearfix;
+    li {
+      float:left;
+    }
+  }
+}
+
+// Error 404 page
+// =========================================================================================================
+
+body.error-page {
+  .error-page-body {
+    min-height:480px;
+    @media (max-width:$screen-xs-max) {
+      min-height:300px;
+    }
+  }
+}

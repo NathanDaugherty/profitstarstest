@@ -1,0 +1,32 @@
+.panel-group {
+	margin-top:20px;
+	.panel-heading {
+		cursor:pointer;
+		&:hover {
+			background:$gray-lighter;
+		}
+		//@extend h4;
+		padding:0;
+		div[data-toggle="collapse"] {
+			padding:10px 45px 10px 15px;
+			position:relative;
+			&:after {
+				content:"+";
+				position:absolute;
+				right:10px;
+				top:50%;
+				margin-top:-(($font-size-base + 5)/1.75);
+				line-height: 1;
+				font-size:$font-size-base + 5;
+			}
+			&[aria-expanded="true"] {
+				&:after {
+					content:"\2013";
+				}
+			}
+		}
+	}
+	.panel-body {
+		padding:20px;
+	}
+}

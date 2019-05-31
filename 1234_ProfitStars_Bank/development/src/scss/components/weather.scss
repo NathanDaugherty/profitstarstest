@@ -1,0 +1,151 @@
+/* ===== Weather Styles ========================================================
+   Author: Josh Sadler & Ryan DeBoer
+   ========================================================================== */
+
+// Default Weather Styles
+.b-weather {
+	width: 300px;
+	@include clearfix();
+	a {
+		text-decoration: none;
+	}
+}
+.b-weather-inner, .b-weather-details, .b-weather-display {
+	@include clearfix();
+}
+.b-weather-row {
+	@include border-top-radius(4px);
+	@include border-right-radius(4px);
+	@include border-bottom-radius(4px);
+	@include border-left-radius(4px);
+	float: left;
+	width: 59px;
+	min-height: 115px; // to make sure all columns are same height
+	text-align: center;
+	margin-right: 1px;
+
+	&:first-child {
+		border: none;
+	}
+}
+.b-weather-day, .b-weather-temp {
+	display: block;
+	color: #333; //Text Color
+}
+.b-weather-ico {
+	max-width: 50px;
+}
+.b-weather-city {
+	float: left;
+}
+.b-weather-info {
+	float: right;
+}
+.b-weather-options {
+	padding: 10px;
+	@include border-bottom-radius(4px);
+	@include border-left-radius(4px);
+	background-color: $gray-lighter;
+	select {
+		min-width: 180px;
+	}
+	fieldset {
+		border: 0;
+		padding: 5px;
+	}
+}
+
+// Optional Weather Styles
+.b-weather {
+	//.border-radius(4px);
+}
+.b-weather-day {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.b-weather-high, .b-weather-now .b-weather-temp {
+	font-weight: bold;
+}
+.b-weather-low {
+	font-size: $font-size-base - 1;
+}
+.b-weather-row {
+	padding: 5px 1px;
+	background-color: #fff; //Change the background here
+}
+.b-weather-row:nth-child(odd) {
+	background-color: $gray-lighter; //Change the background here
+}
+.b-weather-now {
+	@include border-top-radius(4px);
+	@include border-right-radius(4px);
+	@include border-bottom-radius(4px);
+	@include border-left-radius(4px);
+}
+.b-weather-5 {
+	@include border-top-radius(4px);
+	@include border-right-radius(4px);
+	@include border-bottom-radius(4px);
+	@include border-left-radius(4px);
+}
+.b-weather-details {
+	padding: 5px;
+	color: #333;
+	background-color: $gray-lighter; //Change the background here
+	@include border-top-radius(4px);
+	@include border-right-radius(4px);
+	@include border-bottom-radius(4px);
+	@include border-left-radius(4px);
+	margin-top: 1px;
+	cursor: pointer;
+}
+.b-weather-details-active {
+	border-top: 0;
+	border-bottom: 1px solid #333;
+	@include border-top-radius(4px);
+	@include border-right-radius(4px);
+}
+.b-weather-info {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAU9JREFUeNp0UrFKw1AUfS99LSQxUTLZUKiFDiGgZsgkSHRz9wPq0r39kmZ30Q8QHd3aom4hVDq2Y0gdpCBpCiEp9d5g4BnaC4fzeDnn3Ht5oYSrer3eAboDnACOABPAw2KxeCw09E94CDSSJMkCkEqlQiilJMsysl6vEWi8AuNPbmg0GhNN086r1SrZVWmakuVy+RkEgcVwjLLY87xrZNu2h8j4DTWbzaZDTdP8EEXxgk8MwzBnXdf/dUqS5JWB+5S/LNL5DkWB9kyA9Ji/hNQhLDxClHcRBEEVarVaWDKQfaUoykxotVov+0biz1jNZvOZbrfbY8dx3uI4bvMLlzvKsjwfj8eXDGb98n2/2+v17tG0ayQUu67bRW3+cNCFAVn9fv92Op3eRFHUZoytVFWdG4bxPhgMnvA3AUNG+SQcDwhxAMgAK8A3JheaXwEGAGS2dyafJct0AAAAAElFTkSuQmCC);
+	background-repeat: no-repeat;
+	display: block;
+	cursor: pointer;
+	width: 12px;
+	height: 13px;
+	float: right;
+	margin-top: 4px;
+}
+
+.b-weather-settings {
+	margin-top: 5px;
+
+	.b-weather-search-form {
+		margin-bottom: 10px;
+		.b-weather-search-input {
+			margin-bottom: 5px;
+		}
+		.b-weather-search-btn {
+			padding: 2px 10px;
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+			margin-bottom: 5px;
+		}
+	}
+
+	.b-weather-settings-degrees {
+		label {
+			float: left;
+			margin-right: 5px;
+			padding-left: 5px;
+
+			&:last-child {
+				margin-right: 30px;
+			}
+		}
+	}
+	.b-weather-settings-form {
+		button {
+			padding: 3px 10px;
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		}
+	}
+}

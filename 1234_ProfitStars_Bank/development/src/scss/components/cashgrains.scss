@@ -1,0 +1,118 @@
+/* ===== Cashgrains Styles ========================================================
+   Author:
+   ========================================================================== */
+
+.b-cashgrains {
+	width: 400px;
+	font-size: 14px;
+
+	div{
+		margin: 2px 0;
+	}
+}
+
+.b-cashgrains-location-info {
+	background-color: black;
+	color: white;
+}
+
+.b-cashgrains-location {
+	background-color: #999;
+	color: white;
+	padding: 5px;
+}
+
+.b-cashgrains-price-label, .b-cashgrains-price{
+	width: 50px;
+}
+
+.b-cashgrains-basis-label, .b-cashgrains-basis{
+	width: 50px;
+}
+
+.b-cashgrains-date-label, .b-cashgrains-commodity-date{
+	margin-left: 10px;
+	padding: 2px 0;
+	width: 75px;
+}
+
+.b-cashgrains-price-label, .b-cashgrains-basis-label{
+	padding: 1px;
+}
+
+.b-cashgrains-basis, .b-cashgrains-price{
+	text-align:center;
+	color:white;
+	padding: 1px;
+}
+
+.b-cashgrains-price-label {
+	background-color: #006c35;
+	height: 20px;
+	text-align: center;
+}
+
+.b-cashgrains-date-label {
+	height: 20px;
+	text-align: left;
+}
+
+.b-cashgrains-basis-label {
+	background-color: #004491;
+	height: 20px;
+	text-align: center;
+}
+
+.b-cashgrains-location-input {
+	width: 50px;
+}
+
+.b-cashgrains-change-location{
+	display: inline;
+	position: relative;
+	right: -105px;
+}
+
+.b-cashgrains-details {
+	background-color: #666666;
+	padding: 3px;
+	color: white;
+	font-weight: bold;
+	height: 20px;
+	span{
+		float:left;
+	}
+}
+
+.b-cashgrains-commodities-row {
+	margin: 0 !important;
+	padding: 2px;
+	height: 20px;
+	span{
+		float:left;
+	}
+}
+
+.b-cashgrains-type, .b-cashgrains-commodity-label{
+	width: 175px;
+}
+
+.b-cashgrains-commodities{
+	div:nth-child(odd){
+		background-color:#e6e6e6;
+		.b-cashgrains-price{
+			background-color:#00af69;
+		}
+		.b-cashgrains-basis{
+			background-color:#0080c7;
+		}
+	}
+	div:nth-child(even){
+		.b-cashgrains-price{
+			background-color:#009942;
+		}
+		.b-cashgrains-basis{
+			background-color:#006cbf;
+		}
+	}
+}
