@@ -8,7 +8,7 @@
    }
 }
 .logo {
-  	display: block;
+  	display: inline-block;
 }
 .logotype {
   	width: rem-calc(200);
@@ -21,7 +21,7 @@
    top: 50%;
    position: absolute;
    transform: translateY(-50%);
-   right: 0;
+   right: 6px;
    overflow: hidden;
 
    .icon-bar {
@@ -62,6 +62,7 @@
 
    > .container{
       padding: 15px;
+      overflow: auto;
    }
 }
 
@@ -188,33 +189,6 @@
          position: absolute;
          z-index: 5;
       }
-      &-closer{
-         display: none;
-         background: #fff;
-         padding: 20px 10px;
-         border: none;
-         position: absolute;
-         top: 18px;
-         right: 6px;
-
-         .icon-bar {
-            display: block;
-            width: 32px;
-            height: 2px;
-            border-radius: 0;
-            background-color: $gray-light;
-            transform: rotate(45deg);
-            position: relative;
-
-            &:first-child{
-               transform: rotate(-45deg);
-               top: 2px;
-            }
-         }
-      }
-   }
-   .collapse.in .login-closer{
-      display: block;
    }
    form{
       h2, .btn{
@@ -234,9 +208,6 @@
          border: 1px solid $gray-light;
          font-size: 12px;
       }
-      .btn{
-
-      }
    }
    @media only screen and (max-width: 599px){
       .container {
@@ -252,6 +223,30 @@
             color: $blue;
             text-align: center;
          }
+      }
+   }
+}
+.login-closer{
+   display: none;
+   background: #fff;
+   padding: 20px 10px;
+   border: none;
+   position: absolute;
+   top: 18px;
+   right: 0;
+
+   .icon-bar {
+      display: block;
+      width: 32px;
+      height: 2px;
+      border-radius: 0;
+      background-color: $gray-light;
+      transform: rotate(45deg);
+      position: relative;
+
+      &:first-child{
+         transform: rotate(-45deg);
+         top: 2px;
       }
    }
 }

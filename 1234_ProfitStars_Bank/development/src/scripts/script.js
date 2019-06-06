@@ -130,9 +130,9 @@ $(function () {
 	// Close Alert
 	// ==================================================================================================================================
 	$('.alert button.close').on('click', function(e) {
-			e.preventDefault();
-			createCookie('alert', true, 1);
-			$('.alert').hide();
+		e.preventDefault();
+		createCookie('alert', true, 1);
+		$('.alert').hide();
 	});
 
 	//fix for modal elements auto-closing
@@ -153,9 +153,19 @@ $(function () {
 
 	// Header Togglers
 	// ==================================================================================================================================
-	$(".toggle-login").on("click", function(){
-			$(".online-banking-container").toggleClass("toggled");
-	});
+	$('.lock-body').on('click', function(){
+		if ($(this).hasClass('collapsed'))
+			$('body').addClass('fixed');
+		else
+			$('body').removeClass('fixed');
+	})
+
+	$('.login-toggle').on('click', function(){
+		$('.login-closer').fadeIn();
+	})
+	$('.login-closer').on('click', function(){
+		$(this).fadeOut();
+	})
 
 	$('#navbar-collapse').on('show.bs.collapse', function() {
 		$(".online-banking-container").removeClass("toggled");
@@ -212,6 +222,14 @@ $(function () {
 	// 	//e.preventDefault();
 	// 	e.stopPropagation();
 	// });
+
+	// subad hovers
+	// ============================================
+	$('.subad').on('mouseenter', function(){
+		$(this).addClass('hovered');
+	}).on('mouseleave', function(){
+		$(this).removeClass('hovered');
+	})
 
 	//loading script
 	// ============================================

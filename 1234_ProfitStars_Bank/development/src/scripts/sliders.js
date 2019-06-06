@@ -37,7 +37,7 @@ $(window).load(function() {
 
 			}]
 		});
-		$('.icon-links').slick({
+		$('.icon-links > .container').slick({
 			rows:1,
 			slidesPerRow: 4,
 			adaptiveHeight: true,
@@ -62,38 +62,24 @@ $(window).load(function() {
 			infinite: true,
 			fade: false,
 			arrows: true,
-			prevArrow: '<button class="slick-arrow icon icon-arrow-left" aria-label="Previous Slide" type="button"><span class="sr-only">Previous</span></button>',
-			nextArrow: '<button class="slick-arrow icon icon-arrow-right" aria-label="Next Slide" type="button"><span class="sr-only">Next</span></button>',
+			prevArrow: '<button class="slick-arrow icon icon-arrow-left" type="button"><span class="sr-only">Previous Slide</span></button>',
+			nextArrow: '<button class="slick-arrow icon icon-arrow-right" type="button"><span class="sr-only">Next Slide</span></button>',
 			speed: 300,
 			adaptiveHeight: true,
 			autoplaySpeed: 8000,
-			autoplay: false
+			autoplay: true,
+			pauseOnHover: true
 		});
-		$('.subads__slider').slick({
-			dots: false,
-			infinite: true,
+		$('.news').slick({
+			autoplaySpeed: 8000,
+			speed: 300,
+			arrows: true,
+			nextArrow: '<button class="slick-arrow icon icon-arrow-right" type="button"><span class="sr-only">Next News Item</span></button>',
+			prevArrow: '<button class="slick-arrow icon icon-arrow-left" type="button"><span class="sr-only">Previous News Item</span></button>',
 			fade: false,
-			speed: 300,
-			adaptiveHeight: true,
-			autoplaySpeed: 8000,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			responsive: [{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1
-				}
-
-			}]
+			infinite: true
 		});
-		$('.icon-links').slick({
-			dots: false,
+		$('.icon-links > .container').slick({
 			infinite: true,
 			autoplay: false,
 			fade: false,
@@ -102,15 +88,23 @@ $(window).load(function() {
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			responsive: [{
-				breakpoint: 640,
+				breakpoint: 992,
 				settings: {
+					slidesToScroll: 2,
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 680,
+				settings: {
+					slidesToScroll: 2,
 					slidesToShow: 2
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 440,
 				settings: {
-					slidesToShow: 1 // width of screen
+					slidesToScroll: 1,
+					slidesToShow: 1
 				}
 			}]
 		});

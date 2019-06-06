@@ -1,74 +1,92 @@
-<div class="icon-links container">
-   <div class="icon-link remove-blank">
-      <div class="content remove-blank" data-content-block="iconLink1Image" data-content="content" data-editable="editable">
-         {{#page.iconLink1Image}}
-            {{& content}}
-         {{/page.iconLink1Image}}
-         <!-- @if NODE_ENV!='production' -->
-            <img src="/assets/img/icon-lock.png" alt="">
-         <!-- @endif -->
+<div class="icon-links">
+   <div class="container">
+      <div class="icon-link remove-blank">
+         <div class="clearfix">
+            <div class="icon-link-image content remove-blank" data-content-block="iconLink1Image" data-content="content" data-editable="editable">
+               {{#page.iconLink1Image}}
+                  {{& content}}
+               {{/page.iconLink1Image}}
+               <!-- @if NODE_ENV!='production' -->
+                  <img src="/assets/img/icon-lock.png" alt="">
+               <!-- @endif -->
+            </div>
+            <div class="icon-link-text content remove-blank" data-content-block="iconLink1Text" data-content="content" data-editable="editable">
+               {{#page.iconLink1Text}}
+                  {{& content}}
+               {{/page.iconLink1Text}}
+               <!-- @if NODE_ENV!='production' -->
+                  <a href="#">Security<br />Awareness</a>
+               <!-- @endif -->
+            </div>
+         </div>
       </div>
-      <div class="content remove-blank" data-content-block="iconLink1Text" data-content="content" data-editable="editable">
-         {{#page.iconLink1Text}}
-            {{& content}}
-         {{/page.iconLink1Text}}
-         <!-- @if NODE_ENV!='production' -->
-            <a href="#">Security Awareness</a>
-         <!-- @endif -->
+      <div class="icon-link remove-blank">
+         <div class="clearfix">
+            <div class="icon-link-image content remove-blank" data-content-block="iconLink2Image" data-content="content" data-editable="editable">
+               {{#page.iconLink2Image}}
+                  {{& content}}
+               {{/page.iconLink2Image}}
+               <!-- @if NODE_ENV!='production' -->
+                  <img src="/assets/img/icon-calc.png" alt="">
+               <!-- @endif -->
+            </div>
+            <div class="icon-link-text content remove-blank" data-content-block="iconLink2Text" data-content="content" data-editable="editable">
+               {{#page.iconLink2Text}}
+                  {{& content}}
+               {{/page.iconLink2Text}}
+               <!-- @if NODE_ENV!='production' -->
+                  <a href="#">Financial<br />Calculators</a>
+               <!-- @endif -->
+            </div>
+         </div>
+      </div>
+      <div class="icon-link remove-blank">
+         <div class="clearfix">
+            <div class="icon-link-image content remove-blank" data-content-block="iconLink3Image" data-content="content" data-editable="editable">
+               {{#page.iconLink3Image}}
+                  {{& content}}
+               {{/page.iconLink3Image}}
+               <!-- @if NODE_ENV!='production' -->
+                  <img src="/assets/img/icon-cards.png" alt="">
+               <!-- @endif -->
+            </div>
+            <div class="icon-link-text content remove-blank" data-content-block="iconLink3Text" data-content="content" data-editable="editable">
+               {{#page.iconLink3Text}}
+                  {{& content}}
+               {{/page.iconLink3Text}}
+               <!-- @if NODE_ENV!='production' -->
+                  <a href="#">Lost or Stolen<br />Debit Card</a>
+               <!-- @endif -->
+            </div>
+         </div>
+      </div>
+      <div class="icon-link remove-blank">
+         <div class="clearfix">
+            <div class="icon-link-image content remove-blank" data-content-block="iconLink4Image" data-content="content" data-editable="editable">
+               {{#page.iconLink4Image}}
+                  {{& content}}
+               {{/page.iconLink4Image}}
+               <!-- @if NODE_ENV!='production' -->
+                  <img src="/assets/img/icon-locate.png" alt="">
+               <!-- @endif -->
+            </div>
+            <div class="icon-link-text content remove-blank" data-content-block="iconLink4Text" data-content="content" data-editable="editable">
+               {{#page.iconLink4Text}}
+                  {{& content}}
+               {{/page.iconLink4Text}}
+               <!-- @if NODE_ENV!='production' -->
+                  <a href="#">Locate Us</a>
+               <!-- @endif -->
+            </div>
+         </div>
       </div>
    </div>
-   <div class="icon-link remove-blank">
-      <div class="content remove-blank" data-content-block="iconLink2Image" data-content="content" data-editable="editable">
-         {{#page.iconLink2Image}}
-            {{& content}}
-         {{/page.iconLink2Image}}
-         <!-- @if NODE_ENV!='production' -->
-            <img src="/assets/img/icon-calc.png" alt="">
-         <!-- @endif -->
-      </div>
-      <div class="content remove-blank" data-content-block="iconLink2Text" data-content="content" data-editable="editable">
-         {{#page.iconLink2Text}}
-            {{& content}}
-         {{/page.iconLink2Text}}
-         <!-- @if NODE_ENV!='production' -->
-            <a href="#">Financial Calculators</a>
-         <!-- @endif -->
-      </div>
-   </div>
-   <div class="icon-link remove-blank">
-      <div class="content remove-blank" data-content-block="iconLink3Image" data-content="content" data-editable="editable">
-         {{#page.iconLink3Image}}
-            {{& content}}
-         {{/page.iconLink3Image}}
-         <!-- @if NODE_ENV!='production' -->
-            <img src="/assets/img/icon-cards.png" alt="">
-         <!-- @endif -->
-      </div>
-      <div class="content remove-blank" data-content-block="iconLink3Text" data-content="content" data-editable="editable">
-         {{#page.iconLink3Text}}
-            {{& content}}
-         {{/page.iconLink3Text}}
-         <!-- @if NODE_ENV!='production' -->
-            <a href="#">Lost or Stolen Debit Card</a>
-         <!-- @endif -->
-      </div>
-   </div>
-   <div class="icon-link remove-blank">
-      <div class="content remove-blank" data-content-block="iconLink4Image" data-content="content" data-editable="editable">
-         {{#page.iconLink4Image}}
-            {{& content}}
-         {{/page.iconLink4Image}}
-         <!-- @if NODE_ENV!='production' -->
-            <img src="/assets/img/icon-locate.png" alt="">
-         <!-- @endif -->
-      </div>
-      <div class="content remove-blank" data-content-block="iconLink4Text" data-content="content" data-editable="editable">
-         {{#page.iconLink4Text}}
-            {{& content}}
-         {{/page.iconLink4Text}}
-         <!-- @if NODE_ENV!='production' -->
-            <a href="#">Locate Us</a>
-         <!-- @endif -->
-      </div>
+   <div class="icon-links-swiper">
+      <span class="icon icon-arrow-left"></span>
+      <span>
+         <span class="show-for-touch">SWIPE</span>
+         <span class="hide-for-touch">SCROLL</span>
+      </span>
+      <span class="icon icon-arrow-right"></span>
    </div>
 </div>

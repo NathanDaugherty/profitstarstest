@@ -97,3 +97,187 @@
       text-align: center;
    }
 }
+
+/* ===[ Icon Links ]=== */
+.icon-link{
+   // icon links box
+   &s{
+      margin-bottom: 30px;
+      text-align: center;
+
+      .slick-slider{
+         margin-bottom: 0;
+      }
+
+      .slick-list{
+         padding: 30px 0;
+      }
+
+      &-swiper{
+         color: lighten($gray-light, 20%);
+         text-align: center;
+         font-size: 10px;
+         font-weight: 600;
+
+         .icon{
+            font-size: 12px;
+            top: 2px;
+            position: relative;
+         }
+
+         > span:nth-child(2){
+            padding: 0 10px;
+         }
+
+         @media only screen and (min-width: $screen-md){
+            display: none;
+         }
+      }
+   }
+   .content{
+      display: inline-block;
+      vertical-align: middle;
+   }
+   &-image img{
+      max-height: 36px;
+   }
+   &-text{
+      line-height: 1;
+      text-align: left;
+      margin-left: 12px;
+
+      a{
+         color: $gray;
+         @extend .all-caps;
+         font-size: 13px;
+         font-weight: 500;
+      }
+   }
+}
+
+/* ===[ News Slider ]=== */
+.news{
+   background-color: $gray-lighter;
+   padding: 40px 60px;
+
+   p{
+      color: $gray;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      text-align: justify;
+
+      &.big{
+         font-size: 20px;
+         font-weight: 600;
+      }
+   }
+
+   h2{
+      color: $blue;
+      margin: 5px 0 24px;
+      font-size: 30px;
+      font-weight: 700;
+   }
+
+   button.icon{
+      color: lighten($gray, 35%);
+      font-size: 36px;
+      font-weight: bold;
+
+      &::before{
+         padding: 10px;  // for better touch region
+      }
+
+      &-arrow-left{
+         left: 15px;
+      }
+
+      &-arrow-right{
+         right: 25px;
+      }
+   }
+
+   @media only screen and (max-width: ($screen-xs - 1)){
+      padding: 20px 10px 80px;
+
+      h2{
+         font-size: 20px;
+      }
+
+      p.big{
+         font-size: 15px;
+      }
+
+      button.icon{
+         color: $gray-light;
+         font-size: 20px;
+         bottom: .5rem;
+         top: auto;
+
+         &-arrow-left{
+            left: 45%;
+         }
+
+         &-arrow-right{
+            right: 45%;
+         }
+      }
+   }
+}
+
+/* ===[ Home Sub Ads ]=== */
+.subads{
+   margin: 30px 0 18px;
+}
+.subad{
+   position: relative;
+   background: #333;
+   border-bottom: 3px solid #fff;
+   margin: 0 auto 12px;
+   max-width: 300px;
+
+   &__image, &__content *{
+      @include transition(all .3s);
+   }
+   &__image img{
+      opacity: .6;
+      width: 100%;
+   }
+   &__content{
+      padding: 0 1rem;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      z-index: 11;
+
+      *{
+         @extend .no-pointer-event;
+         color: #fff;
+         font-size: 18px;
+         margin: 0;
+         line-height: 1.2;
+         position: relative;
+         top: 15px;
+      }
+      h2{
+         margin-bottom: 10px;
+      }
+      p{
+         opacity: 0;
+      }
+   }
+   &.hovered{
+      border-bottom-color: $green;
+      .subad__image img{
+         opacity: .25;
+      }
+      .subad__content *{
+         opacity: 1;
+         top: 0;
+      }
+   }
+}

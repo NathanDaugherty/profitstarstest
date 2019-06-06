@@ -45,14 +45,15 @@
     .accessibility-link {
       position: relative;
       color: #4d4d4d;
-      padding-left: 65px;
+      padding-left: 70px;
       display: inline-block;
       &::after, &::before {
-        left: 0;
+        left: 10px;
       }
       .accessibility-text {
         display: inline-block;
-        line-height: 34px;
+        line-height: 1.4;
+        text-align: left;
       }
       &:hover {
         padding-left: 70px;
